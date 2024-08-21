@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: linear-gradient(to bottom, #E0F7FA, #ffffff);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.header-container h1 {
+    font-size: 1.9em;
+    color: #0277BD;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+
+/* Containers */
+
+.container {
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.container h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    color: black; 
+}
+
+.sub-page-container{
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: white;
+}
+
+/* Info */
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+}
+
+
+.info-container .info-text{
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Content */
+
+.content {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sub-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    width: 100%;
+}
+
+.sub-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sub-content .sub-content-image{
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+strong {
+    color: #eee; 
+    font-size: 1.2em;
+}
+
+/* Before-After */
+
+.before-after {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px auto;
+}
+
+/* Navigation */
+.nav-container {
+    position: fixed;
+    top: 130px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0050c1;
+    color: white;
+    font-size: 0.7em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-button.main {
+    background-color: #0050c1;
+}
+
+.nav-button.hidden {
+    display: none;
+}
+
+.nav-button.visible {
+    display: block;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    background-color: #4FC3F7; 
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCareZone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function toggleNavButtons() {
+                const navButtons = document.querySelectorAll('.nav-button.hidden');
+                navButtons.forEach(button => {
+                    button.classList.toggle('visible');
+                });
+            }
+    
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+    
+            const mainNavButton = document.querySelector('.nav-button.main');
+            mainNavButton.addEventListener('click', toggleNavButtons);
+    
+            const hiddenNavButtons = document.querySelectorAll('.nav-button.hidden');
+            hiddenNavButtons.forEach((button, index) => {
+                button.addEventListener('click', function() {
+                    scrollToSection(`section${index + 1}`);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>스카이케어존</h1>
+        </div>
+    </header>
+    
+    <!-- Navigation Buttons -->
+    <div class="nav-container">
+        <button class="nav-button main">☰</button>
+        <button class="nav-button hidden">소개</button>
+        <button class="nav-button hidden">서비스</button>
+        <button class="nav-button hidden">리뷰</button>
+        <button class="nav-button hidden">예약정보</button>
+    </div>
+
+    <div id="section1" class="container">
+        <h1>소개</h1>
+        <div class="info-container">
+            <div class="info-text">
+                <h2>번호, 상담시간</h2>
+                <p>구록 내용</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="section2" class="container">
+        <h1>서비스</h1>
+        <div class="content">
+            <a href="air_conditioner.html" class="sub-content">
+                <img src="assets/img/air_conditioner.jpg" alt="에어컨" class="sub-content-image">
+                <div class="sub-content-text">
+                    <h2>에어컨</h2>
+                    <p>설명</p>
+                </div>
+            </a>
+                
+            <a href="disinfection.html" class="sub-content">
+                <img src="assets/img/disinfection.jpg" alt="방역" class="sub-content-image">
+                <div class="sub-content-text">
+                    <h2>방역</h2>
+                    <p>설명</p>
+                </div>
+            </a>
+            <a href="room_cleaning.html" class="sub-content">
+                <img src="assets/img/room_cleaning.jpg" alt="청소" class="sub-content-image">
+                <div class="sub-content-text">
+                    <h2>청소</h2>
+                    <p>설명</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="section3" class="container">
+        <h1>리뷰</h1>
+        <p>여기에 사진 띄우기</p>
+    </div>
+
+    <div id="section4" class="container">
+        <h1>예약정보</h1>
+        <p>여기에 예약 정보</p>
+    </div>
+
+    <footer>
+        <p><strong>스카이케어존</strong></p>
+        <p>대표자: 이름  ｜ 대표전화: 번호  ｜ 사업자등록번호: 125-53-00469</p>
+        <p>주소: 주소</p>
+    </footer>
+
+</body>
+
+</html>

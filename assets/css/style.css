@@ -5,6 +5,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
 body {
     font-family: 'Pretendard-Regular', sans-serif;
     margin: 0;
@@ -16,6 +24,7 @@ body {
 
 /* Header */
 header {
+    font-family: 'Freesentation-9Black';
     text-align: center;
     background: linear-gradient(to bottom, #E0F7FA, #ffffff);
 }
@@ -30,18 +39,29 @@ header {
 }
 
 .header-container h1 {
-    font-size: 1.9em;
-    color: #0277BD;
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: -1.5px;
 }
 
-
 /* Containers */
+
+.left-container {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: white;
+}
 
 .container {
     max-width: 1000px;
-    margin: 15px auto;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -65,23 +85,100 @@ header {
     background-color: white;
 }
 
-/* Info */
 
-.info-container {
+
+/* stuff */
+.deco {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.name {
+    font-size: 1.7em;
+    font-weight: 800;
+
+}
+
+.sky {
+    color: #169ae7;
+}
+
+.carezone {
+    color: #A6D608;
+}
+
+.sky2 {
+    color: #0f7ac2;
+}
+
+.carezone2 {
+    color: #89b600;
+}
+
+
+.green {
+    color: #6B8E23
+}
+
+/* section1 */
+#section1 {
+    background-image: url('../img/scz.jpg');
+    background-size: cover;
+
+}
+
+#sec1-info {
     display: flex;
     flex-direction: row;
-    padding: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 85px;
+    padding-bottom: 0px;
+    width: 62.5%;
 }
 
 
-.info-container .info-text{
+#sec1-info #sec1-text {
+    text-align: left;
+    padding: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.7);;
+}
+
+#sec1-info #sec1-text p {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+#num {
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 0;
+    padding-bottom: 70px;
+    width: 62.5%;
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
+#num p {
+    margin-top: 0;
+    background-color: rgb(46, 99, 232);
+    color: white;
+    font-size: 1.4em;
+    font-weight: 700;
+    width: 100%;
+}
+
+/* section2 */
+
+#sec2-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#sec2-info p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
 /* Content */
 
 .content {

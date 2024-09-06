@@ -36,6 +36,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
+    padding-bottom: 0;
 }
 
 .header-container h1 {
@@ -48,7 +49,7 @@ header {
 .left-container {
     width: 70%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 100px;
     padding: 15px;
     display: flex;
@@ -58,10 +59,10 @@ header {
 }
 
 .container {
-    max-width: 1000px;
+    width: 70%;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -75,15 +76,7 @@ header {
     color: black; 
 }
 
-.sub-page-container{
-    max-width: 1000px;
-    margin: 15px auto;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    background-color: white;
-}
+
 
 
 
@@ -119,6 +112,11 @@ header {
 .green {
     color: #6B8E23
 }
+
+a {
+    text-decoration: none;
+}
+
 
 /* section1 */
 #section1 {
@@ -168,7 +166,11 @@ header {
     width: 100%;
 }
 
+
 /* section2 */
+#section2 h1{
+    margin-bottom: 30px;
+}
 
 #sec2-info {
     margin-top: 30px;
@@ -179,16 +181,13 @@ header {
     font-size: 1.2em;
     font-weight: 500;
 }
-/* Content */
 
 .content {
-    max-width: 1000px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
 }
 
 .sub-content {
@@ -198,10 +197,9 @@ header {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: white;
-    color: inherit;
+    color: black;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 300px;
-    width: 100%;
+    width: 40%;
 }
 
 .sub-content:hover {
@@ -214,16 +212,91 @@ header {
     height: auto;
 }
 
+.sub-content-text{
+    text-decoration: none;
+}
+
+.sub-content-text h2 {
+    text-align: center;
+}
+
+.sub-content-text p {
+    padding: 10px 10px;
+}
+
+/* sub-page */
+
+.semi-header {
+    margin: 0 0;
+    width: 100%;
+    background-color: #3cd1d1;
+}
+
+.semi-header h1 {
+    margin-left: 12%;
+    color: white;
+}
+
+.container-sub {
+    margin: 0 15%;
+}
+
+.step{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: white;
+}
+
+.warning{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: white;
+}
+
+.warning h2 {
+    margin-bottom: 0;
+}
+
+.warning h3 {
+    margin-bottom: 0;
+}
+
+.warning p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+
+.container-sub h1 {
+    margin-bottom: 0;
+}
+
+.image-container{
+    width: 100%;
+    padding: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Footer */
 
 footer {
     background-color: #333;
     color: #ccc;
-    text-align: center;
+    text-align: left;
     padding: 1rem 0;
     position: relative;
     width: 100%;
     bottom: 0;
+}
+
+footer p {
+    padding-left: 10%;
 }
 
 strong {

@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyCareZone</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+    
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach((link, index) => {
+                link.addEventListener('click', function() {
+                    scrollToSection(`part${index + 1}`);
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -15,30 +31,44 @@
             <a href="index.html">
                 <h1><span class="sky">스카이</span><span class="carezone">케어존</span></h1>
             </a>
+
+            <div class="button-container">
+                <a href="air_conditioner.html" class="header-button">에어컨</a>
+                <a href="disinfection.html" class="header-button">방역</a>
+                <a href="cleaning.html" class="header-button">클리닝</a>
+            </div>
         </div>
     </header>
 
-    <div class="semi-header"><h1>가구 청소</h1></div>
+    <div class="sidebar">
+        <a href="javascript:void(0)">절차</a>
+        <a href="javascript:void(0)">유의사항</a>
+        <a href="javascript:void(0)">작업사진</a>
+    </div>
 
-    <div class="container-sub">
-        <div class="step">
-            <h1>절차(습식)</h1>
-            <div class="image-container"><img src="assets/img/D3.jpg" alt="가구 절차"></div>
-        </div>
+    <div id="main-container">
+        <div class="semi-header"><h1>가구 청소</h1></div>
 
-        <div class="warning">
-            <h1>유의사항</h1>
-            <p>
-                건식청소와 습식청소 두 가지 중 선택하실 수 있습니다.
-                습식청소시 건식청소는 무료입니다.
-                기간이 오래된 자국은 완전히 지워지지 않을 수 있습니다.
-                스팀 살균청소 해드립니다 (추가 1만원붙습니다)
-            </p>
-        </div>
+        <div class="container-sub">
+            <div id="part1" class="step">
+                <h1>절차(습식)</h1>
+                <div class="image-container"><img src="assets/img/D3.jpg" alt="가구 절차"></div>
+            </div>
 
-        <div class="before-after">
-            <img src="assets/img/before_after_cleaning_1.jpg" alt="청소 1">
-            <img src="assets/img/before_after_cleaning_2.jpg" alt="청소 2">
+            <div id="part2" class="warning">
+                <h1>유의사항</h1>
+                <p>
+                    건식청소와 습식청소 두 가지 중 선택하실 수 있습니다.
+                    습식청소시 건식청소는 무료입니다.
+                    기간이 오래된 자국은 완전히 지워지지 않을 수 있습니다.
+                    스팀 살균청소 해드립니다 (추가 1만원붙습니다)
+                </p>
+            </div>
+
+            <div id="part3" class="before-after">
+                <img src="assets/img/before_after_cleaning_1.jpg" alt="청소 1">
+                <img src="assets/img/before_after_cleaning_2.jpg" alt="청소 2">
+            </div>
         </div>
     </div>
 

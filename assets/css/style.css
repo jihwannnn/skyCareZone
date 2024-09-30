@@ -12,6 +12,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+  
+
 body {
     font-family: 'Pretendard-Regular', sans-serif;
     margin: 0;
@@ -28,6 +37,7 @@ header {
     text-align: center;
     background-color: rgb(221, 237, 253);
     position: fixed;
+    height: 15vh;
     top: 0;
     left: 0;
     width: 100%;
@@ -87,19 +97,24 @@ header {
 
 .container {
     width: 80%;
-    margin: auto;
-    margin-top: 7vh;
-    margin-bottom: 7vh;
-    padding: 1.5vw;
+    padding: 7vh 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+}
+
+.full-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .container h1 {
     text-align: left;
-    margin-bottom: 1vh;
+    width: 100%;
+    margin-bottom: 7vh;
     color: black; 
 }
 
@@ -136,6 +151,10 @@ header {
     color: #6B8E23;
 }
 
+.red {
+    color: rgb(255, 0, 0);
+}
+
 a {
     text-decoration: none;
 }
@@ -170,10 +189,10 @@ a {
 }
 
 
-
 /* section2 */
-#section2 h1{
-    margin-bottom: 3vh;
+
+#section2{
+    background-color: #eaeaea;
 }
 
 #sec2-info {
@@ -224,6 +243,92 @@ a {
     text-align: center;
 }
 
+/* section 3 */
+
+#section3 h1{
+    text-align: center;
+    font-family: 'LINESeedKR-Bd';
+    margin-bottom: 0;
+}
+
+#review-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#review-list {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+#review-list img {
+    width: 50%;
+    height: auto;
+}
+
+
+
+/* section 4 */
+
+#section4 {
+    height: 50vh;
+}
+
+#section4 #text-container {
+    width: 50%;
+    height: 100%;
+    background-image: url('../img/contact1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#section4 #text-container .plate {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section4 h1 {
+    position: absolute;
+    color: white;
+    padding: 20px;
+}
+
+#section4 .contact-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#section4 .contact-container .contact-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    gap: 10px;
+}
+
+#section4 .contact-container .contact-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section4 .contact-container .contact-list .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B8E23;
+}
+
+
 /* sub-page */
 
 .semi-header {
@@ -270,6 +375,11 @@ a {
     font-weight: 300;
 }
 
+.warning ul {
+    margin: 0;
+    font-size: 1.2em;
+}
+
 .container-sub h1 {
     margin-bottom: 0;
 }
@@ -281,6 +391,42 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+/* Before-After */
+
+.before-after {
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-top: 2vw;
+}
+
+.before-after h1 {
+    width: 100%;
+}
+
+.before-after h2 {
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.before-after .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 가로 2열 */
+    width: 80%;
+    gap: 10px; /* 이미지 간격 */
+}
+
+.before-after .photo-grid img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Footer */
 
@@ -302,15 +448,6 @@ footer p {
 strong {
     color: #eee; 
     font-size: 1.2em;
-}
-
-/* Before-After */
-
-.before-after {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15vh auto;
 }
 
 /* Sdiebar */
